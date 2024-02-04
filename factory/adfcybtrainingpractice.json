@@ -1,0 +1,9 @@
+{
+	"name": "adfcybtrainingpractice",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e02efc6-9933-4c93-90aa-98eb78d432ee",
+		"tenantId": "37709cfb-f3b2-4648-aea1-9c828a886147"
+	}
+}
