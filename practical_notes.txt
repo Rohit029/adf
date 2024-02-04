@@ -1,0 +1,73 @@
+******************  AZURE  *********************
+
+1) Create a free trial account on portal.azure.com
+
+2) You will get free credits to use for a month under subscription
+
+3) Now create a RESOURCE GROUP under the subscription.
+
+4) Now click on '+' icon to create a resource group.
+ => Under project details choose a subscription (currenlty      we are using free trial.
+ => Now give your resource group a name. Use hypen and     lowerscore to follow a naming convention.
+ => Now choose a region according to your convenience and     need. We are choosing East-US for now.
+ => After that provide tags (key-value pair) for your resource group. Tags 
+    acts as a matadata about your rg. e.g. Owner of rg, 
+    project name, environment etc.
+
+5) Now create a STORAGE ACCOUNT for your resource group(rg).Click on '+' icon to create a storage account.
+ => Select your subscription (free trial)
+ => Select your resource group.
+ => Give your storage acc. a name. & select region (East- us)
+ => Now select a performance parameter.
+ => Select redundancy ( LRS for now )
+ => Now in Advanced section keep everything default. Just select 'Enable Hierarchial Namespace' if you want a Data Lake Storage otherwise it will be BLOB Storage account.
+ => Now in Networking section, keep everything default (here we have kept public access).
+ => Now in Data Protection section, you can enable soft delete feature to protect your data that was deleted for some days.
+ => In Encryption section, keep everything default.
+ => In Tgas section, select tags as we previously did in creatinf RG.
+ => Finally, in review section all the validations will be checked & if passed you can click on CREATE to create your Storage Account.
+
+
+6) Now you can see CONTAINERS option in your storage account. Containers ae nothing but folders.
+ => You can create different files using '+' container icon.
+ =>>> Here on web we have very limited options to manipulate our files. So we can use Azure Storage Explorer for that.
+
+
+7) Till now we know that we can query our data from SQLs but we can now query the data from the fiels that we stored in storage accounts using AZURE DATA EXPLORER.
+
+ => Now you can create Azure Data Explorer Cluster using '+' create icon.
+ => Create a cluster name.
+ => In Compute Specification, choose a Workload (We selected dev/test).
+ => After them keep all the default options & click on 'Review + Create'.
+ => It will validate then click on Create so it will start deployment.
+
+8) Now we create a database and query the files that we stored in data lake storgae using 'KQL'.
+ => We can't work with files and tables using Azure Data Explorer. It is used for BLOB or Data Lake Stroage.
+ => Now to use Azure Data Explorer, we need to create at least one Database.
+ => Now go to Query section and create a Table or Reference to this database.
+ => It will open new tab, here you specify table name to be cretaed & in source section select source type, storage account, container etc.
+ =>  After that cretae schema.
+
+   SO THIS WAS ALL FOR UNSTRUCTURED / SEMI-STRUCTURED DATA 
+---------------*------------------------------*_--------
+
+
+Upload/Download your local files to BLOB or ADLS Storage.
+
+You can do it with 1) AZ Copy 2) Azure Storage Explorer
+
+
+-----------------**--------------------------***----------------------
+
+DATA INTEGRATION SERVICE =
+
+* AZURE DATA FACTORY (ADF): 
+ => It's ETL tool to build data pipeline.It's a native tool of Microsoft.
+ => ADF allows to orchestrate & automate data integration, transformation and movement.
+ => For development of your pipeline.
+
+
+ => You can create a pipeline using Azure Data Factory option in azure portal.
+ => After creation of development pipeline you can click on launch studio option.
+ => Now here you will get several options.
+ => From manage section, go to linked services where you can connect to your source/target. We will select ADLS Gen-2 to pull out data from our csv file
