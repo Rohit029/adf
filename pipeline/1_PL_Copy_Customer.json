@@ -46,7 +46,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_Adventureworks_customers",
+						"referenceName": "DS_ADLS_Adventureworks_customers",
 						"type": "DatasetReference"
 					}
 				],

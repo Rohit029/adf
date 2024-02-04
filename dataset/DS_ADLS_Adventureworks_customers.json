@@ -1,5 +1,5 @@
 {
-	"name": "DS_Adventureworks_customers",
+	"name": "DS_ADLS_Adventureworks_customers",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_ADLS_AdventureWorks",
